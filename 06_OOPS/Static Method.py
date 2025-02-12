@@ -2,6 +2,7 @@
 
 # Static Method -> method that belongs to a class rather than an instance of class
 # to access static method use -> ClassName . method
+# isme self nhi likhna
 
 class Car:
     def __init__(self,brand,model):
@@ -17,3 +18,11 @@ class Car:
     
     def fuel_type(self):
         return "Petrol or Diesel"
+    
+    @staticmethod #decorators-> methods ki functionality ko enhance kar dete h
+    def general_description():
+        return "Cars are means of transport"
+    
+my_car = Car("Tata","Safari")
+# print(my_car.general_description())
+print(Car.general_description())
